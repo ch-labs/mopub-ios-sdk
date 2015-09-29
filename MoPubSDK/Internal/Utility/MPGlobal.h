@@ -72,7 +72,7 @@ typedef NSUInteger MPInterstitialOrientationType;
 /*
  * Returns string with reserved/unsafe characters encoded.
  */
-- (NSString *)URLEncodedString;
+- (NSString *)mp_URLEncodedString;
 
 @end
 
@@ -80,7 +80,7 @@ typedef NSUInteger MPInterstitialOrientationType;
 
 @interface UIDevice (MPAdditions)
 
-- (NSString *)hardwareDeviceName;
+- (NSString *)mp_hardwareDeviceName;
 
 @end
 

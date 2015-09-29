@@ -76,7 +76,7 @@ describe(@"MPLogEventCommunicator", ^{
             
             NSData *expectedJSON = [NSJSONSerialization dataWithJSONObject:@[[event asDictionary]] options:0 error:nil];
             NSString *expectedJSONString = [[NSString alloc] initWithData:expectedJSON encoding:NSUTF8StringEncoding];
-            NSString *expectedBodyString = [NSString stringWithFormat:@"log=%@", [expectedJSONString URLEncodedString]];
+            NSString *expectedBodyString = [NSString stringWithFormat:@"log=%@", [expectedJSONString mp_URLEncodedString]];
             request.HTTPBodyAsString should equal(expectedBodyString);
         });
         
